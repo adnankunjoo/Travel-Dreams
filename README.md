@@ -3,8 +3,8 @@
 A React application showcasing my travel bucket list, built with Vite.
 
 ## Links
-- **GitHub Repository:** [your-github-link-here]
-- **Live Website:** [your-deployment-link-here]
+- **GitHub Repository:** https://github.com/adnankunjoo/Travel-Dreams.git
+- **Live Website:** https://vercel.com/zeros-projects-9dc2928a/travel-dreams/71gs9joZshqx7f1U4AtonfXCRtxn
 
 ## Features
 - Header with title and tagline
