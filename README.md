@@ -12,9 +12,3 @@ A React application showcasing my travel bucket list, built with Vite.
 - Destinations section with 4+ dream destinations
 - Travel goals section with multiple goals
 - Simple responsive styling
-
-## Run Locally
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/<your-repo>.git
-   cd <your-repo>

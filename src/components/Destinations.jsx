@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from './Modal'
 
 const DESTINATIONS = [
   {
@@ -40,21 +41,36 @@ const DESTINATIONS = [
 ]
 
 export default function Destinations() {
+  const [selected, setSelected] = useState(null)
+
   return (
     <section className="section" aria-labelledby="dest-heading">
       <h2 id="dest-heading">Dream Destinations</h2>
+
       <div className="dest-list" role="list">
         {DESTINATIONS.map(dest => (
-          <article className="card" role="listitem" key={dest.id}>
+          <article
+            className="card clickable"
+            role="listitem"
+            key={dest.id}
+            onClick={() => setSelected(dest)}
+          >
             <img src={dest.img} alt={`${dest.city} photo`} />
             <div className="card-body">
               <h3>{dest.city}, {dest.country}</h3>
               <div className="meta">{dest.region} • Main attraction: {dest.mainAttraction}</div>
-              <div className="reason">{dest.why}</div>
+              <div className="reason">{dest.why.substring(0, 90)}...</div>
+              <p className="view-more">Click to view details →</p>
             </div>
           </article>
         ))}
       </div>
+
+      <Modal
+        isOpen={!!selected}
+        destination={selected}
+        onClose={() => setSelected(null)}
+      />
     </section>
   )
 }
